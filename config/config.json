@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ask-ceo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/askCeo/AskCeoWebPart.js",
+          "manifest": "./src/webparts/askCeo/AskCeoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AskCeoWebPartStrings": "lib/webparts/askCeo/loc/{locale}.js"
+  }
+}

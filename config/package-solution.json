@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ask-ceo-client-side-solution",
+    "id": "5784cb61-bab5-4bc8-a843-e1053bfd73c8",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "askCeo description"
+      },
+      "longDescription": {
+        "default": "askCeo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ask-ceo Feature",
+        "description": "The feature that activates elements of the ask-ceo solution.",
+        "id": "9edf4534-6c8c-42f2-a013-b2407bf59956",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ask-ceo.sppkg"
+  }
+}
