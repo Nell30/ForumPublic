@@ -130,6 +130,7 @@ h1 {
   line-height: 50px;
   list-style-type: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
 .listItem {
@@ -151,7 +152,9 @@ h1 {
   list-style-type: none;
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-
+  width: 80%;
+  max-width: 940px; /* Optional: limits the maximum width of the items */
+  margin: 0 auto 20px; /* Centers the item horizontally */
 }
 
 .listpadding{
@@ -932,3 +935,19 @@ input:checked + .slider:before {
   animation: pulse 2s infinite; /* Applying the pulse animation */
 }
 
+pre{
+  text-align: left;
+  width: 90%;
+  word-wrap: break-word; /* Ensures long words break to fit within the container */
+  overflow-wrap: break-word; /* Ensures long words break to fit within the container */
+  white-space: pre-wrap; /* Preserves whitespace but wraps text */
+  overflow: hidden; /* Hides any overflow */
+}
+
+.spListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensures items stack vertically */
+  width: 100%; /* Ensures the container takes the full width */
+}

@@ -26,7 +26,7 @@ export default class AskCeoWebPart extends BaseClientSideWebPart<{}> {
 
   private async getListData(): Promise<ISPList[]> {
     const response = await this.context.spHttpClient.get(
-      `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/GetByTitle('Reflection')/items`,
+      `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/GetByTitle('Reflection')/items?$top=5000`,
       SPHttpClient.configurations.v1
     );
 
@@ -113,7 +113,6 @@ export default class AskCeoWebPart extends BaseClientSideWebPart<{}> {
             <ul class="${styles.replyList}">
             ${replies.map(reply => `
               <li style="margin-top:5px">
-                <b class="${styles.boldJake}">Jake replied:</b>
                 <pre>${reply}</pre>
               </li>
               </li>
@@ -244,7 +243,7 @@ export default class AskCeoWebPart extends BaseClientSideWebPart<{}> {
   
   private async getListItem(itemId: number): Promise<ISPList> {
     const response: SPHttpClientResponse = await this.context.spHttpClient.get(
-      `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/GetByTitle('Reflection')/items(${itemId})`,
+        `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/GetByTitle('Reflection')/items(${itemId})`,
       SPHttpClient.configurations.v1
     );
 
@@ -468,7 +467,7 @@ export default class AskCeoWebPart extends BaseClientSideWebPart<{}> {
           </div>
         </div>
   
-        <div id="spListContainer"></div>
+        <div id="spListContainer" class="${styles.spListContainer}"></div>
   
         <div class="${styles.pagination}">
           <ul class="${styles.paginationWrapper}">
